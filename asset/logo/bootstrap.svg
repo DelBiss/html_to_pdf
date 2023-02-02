@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 200 159.375"
+   version="1.1"
+   id="svg88"
+   sodipodi:docname="bootstrap.svg"
+   width="200"
+   height="159.375"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview90"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.22768838"
+     inkscape:cx="-783.96621"
+     inkscape:cy="-1047.4843"
+     inkscape:window-width="1600"
+     inkscape:window-height="829"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg88" />
+  <defs
+     id="defs7">
+    <linearGradient
+       id="black">
+      <title
+         id="title2">Black</title>
+      <stop
+         style="stop-color: rgb(0, 0, 0);"
+         id="stop4" />
+    </linearGradient>
+  </defs>
+  <path
+     d="M 22.06289,20.82813 C 21.68555,9.99219 30.12813,0 41.53985,0 H 158.4746 c 11.4117,0 19.8543,9.99219 19.477,20.82813 -0.3625,10.40898 0.1082,23.89258 3.5015,34.88672 3.4043,11.02812 9.145,17.99882 18.5469,18.89453 v 10.15625 c -9.4019,0.8957 -15.1426,7.8664 -18.5469,18.89453 -3.3933,10.99414 -3.864,24.47773 -3.5015,34.88711 0.3773,10.83555 -8.0653,20.82773 -19.477,20.82773 H 41.53985 c -11.41172,0 -19.8543,-9.99218 -19.47657,-20.82773 C 22.42539,128.13789 21.95469,114.6543 18.56094,103.66016 15.15703,92.63203 9.40235,85.66133 0,84.76563 V 74.60938 C 9.40196,73.71367 15.15703,66.74297 18.56094,55.71485 21.95469,44.72071 22.42539,31.23711 22.06289,20.82813 Z m 82.27422,101.22539 c 18.47539,0 29.6086,-9.0461 29.6086,-23.9668 0,-11.27851 -7.94375,-19.44375 -19.73907,-20.73633 v -0.46992 c 8.66602,-1.40976 15.46641,-9.45742 15.46641,-18.44492 0,-12.80586 -10.11016,-21.14766 -25.51641,-21.14766 H 69.49258 v 84.76563 z M 82.97305,48.03789 h 17.93398 c 9.74922,0 15.28555,4.34688 15.28555,12.21836 0,8.40039 -6.43906,13.09961 -18.11406,13.09961 H 82.97305 Z m 0,63.26602 V 83.40117 h 17.81328 c 12.7582,0 19.37813,4.69922 19.37813,13.86329 0,9.16367 -6.43907,14.03945 -18.59571,14.03945 z"
+     id="bootstrap" />
+</svg>

@@ -1,0 +1,141 @@
+@use "cv";
+$box-blur: 0.2em 0.2em 0.2em #000;
+$title-font: 'Playfair Display',
+serif;
+$corp-font: TimesNewRoman,
+"Times New Roman",
+Times,
+Baskerville,
+Georgia,
+serif;
+$page-margin:2em;
+body {
+    @mixin title($isBlock: false, $isInverted: false) {
+        font-family: $title-font;
+        font-weight: 700;
+    }
+    font-family: $corp-font;
+    svg {display: unset!important;
+        aspect-ratio: 1;
+        fill: white;
+        filter: drop-shadow( $box-blur);
+        width: 100%;}
+    ul {
+        margin-block-start: 0;
+        margin-block-end: 0em;
+        padding-inline-start: 1.5em;
+    }
+    >.header {
+        @include cv.as-list();
+        margin-inline: $page-margin;
+        margin-block-start: $page-margin;
+        #logo-back {
+            display: none;
+        }
+        #nom {
+            flex-grow: 1;
+            h1 {
+                @include title();
+                font-size: 2.5em;
+                margin-block: 0.3em;
+            }
+        }
+        #poste {
+            display: none;
+            div {
+                @include title();
+            }
+        }
+        #contact {
+            ul {
+                @include title();
+                @include cv.separated("—", row, 0.5em, 0.5em);
+            }
+        }
+    }
+    >.footer {
+        .logo {
+            display: none;
+        }
+        #contact {
+            display: none;
+        }
+    }
+    >.content {
+        margin-inline: $page-margin;
+        display: flex;
+        flex-direction: column;
+        .section {
+            h2 {
+                @include title();
+                border-bottom-color: black;
+                border-bottom-style: solid;
+            }
+            .section-content {
+                @include cv.as-list();
+                flex-wrap: nowrap;
+                column-gap: 1.5em;
+                .entry {
+                    flex-basis: 100%;
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        margin-block-end: 0.6em;
+                        .type {
+                            order: -1;
+                        }
+                        h3 {
+                            @include title();
+                            font-size: 1.25em;
+                            margin-block-start: 0;
+                            margin-block-end: 0.3em;
+                        }
+                        .instance {
+                            @include cv.as-list();
+                            .location {
+                                @include cv.separated(",", $space-after: 0.3em);
+                                flex-grow: 1;
+                                // margin-block-start: 0.6em;
+                            }
+                            time {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .description {
+                        display: none;
+                    }
+                }
+            }
+            // &#formation {}
+            &#profil {
+                .section-content {
+                    .entry {
+                        ul {
+                            @include cv.separated("—", row, 0.5em, 0.5em);
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+            // &#competence {}
+            // &#experience {}
+            &#connaissance {
+                .section-content {
+                    flex-direction: column;
+                    .entry {
+                        margin-block-start: 0.3em;
+                        @include cv.separated(":", row);
+                        .info {
+                            flex-direction: row;
+                            width: 20em;
+                        }
+                        ul {
+                            @include cv.separated(",");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

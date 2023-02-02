@@ -1,0 +1,40 @@
+:root {
+    --title-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    --corp-font: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+html {
+    font-size: 1.25vh;
+}
+
+body {
+    font-family: var(--corp-font);
+    /* font-size: 1.25vh; */
+}
+
+.title {
+    font-family: var(--title-font);
+    font-weight: 700;
+}
+
+.competence .description,
+.location,
+.connaissance li {
+    font-size: 0.9em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+header .poste {
+    font-size: 2em;
+}

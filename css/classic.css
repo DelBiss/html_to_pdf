@@ -1,0 +1,230 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  background-color: black;
+}
+
+@media print {
+  body {
+    background-color: white;
+  }
+}
+@page {
+  size: 8.5in 11in;
+  margin: 0.2in;
+}
+.cv {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  margin-block: 0px;
+  margin-inline: auto;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media print {
+  .cv {
+    font-size: 1.25vh !important;
+    height: 100vh !important;
+    width: 77.2727vh !important;
+  }
+}
+.cv a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.cv .content {
+  flex-grow: 1;
+}
+
+body {
+  font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+body svg {
+  /* display: unset !important; */
+  aspect-ratio: 1;
+  fill: white;
+  filter: drop-shadow(0.2em 0.2em 0.2em #000);
+  width: 100%;
+}
+body ul {
+  margin-block-start: 0;
+  margin-block-end: 0em;
+  padding-inline-start: 1.5em;
+}
+body > .header {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+  margin-inline: 2em;
+  margin-block-start: 2em;
+}
+body > .header #logo-back {
+  display: none;
+}
+body > .header #nom {
+  flex-grow: 1;
+}
+body > .header #nom h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-block: 0.3em;
+}
+body > .header #poste {
+  display: none;
+}
+body > .header #poste div {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+body > .header #contact ul {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+}
+body > .header #contact ul > *:not(:last-child)::after {
+  content: "—";
+  padding-inline-start: 0.5em;
+  padding-inline-end: 0.5em;
+}
+body > .footer .logo {
+  display: none;
+}
+body > .footer #contact {
+  display: none;
+}
+body > .content {
+  margin-inline: 2em;
+  display: flex;
+  flex-direction: column;
+}
+body > .content .section h2 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  border-bottom-color: black;
+  border-bottom-style: solid;
+}
+body > .content .section .section-content {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+  flex-wrap: nowrap;
+  column-gap: 1.5em;
+}
+body > .content .section .section-content .entry {
+  flex-basis: 100%;
+}
+body > .content .section .section-content .entry .info {
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 0.6em;
+}
+body > .content .section .section-content .entry .info .type {
+  order: -1;
+}
+body > .content .section .section-content .entry .info h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 1.25em;
+  margin-block-start: 0;
+  margin-block-end: 0.3em;
+}
+body > .content .section .section-content .entry .info .instance {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+}
+body > .content .section .section-content .entry .info .instance .location {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+  flex-grow: 1;
+}
+body > .content .section .section-content .entry .info .instance .location > *:not(:last-child)::after {
+  content: ",";
+  padding-inline-start: 0;
+  padding-inline-end: 0.3em;
+}
+body > .content .section .section-content .entry .info .instance time {
+  font-weight: 600;
+}
+body > .content .section .section-content .entry .description {
+  display: none;
+}
+body > .content .section#profil .section-content .entry ul {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+  justify-content: center;
+}
+body > .content .section#profil .section-content .entry ul > *:not(:last-child)::after {
+  content: "—";
+  padding-inline-start: 0.5em;
+  padding-inline-end: 0.5em;
+}
+body > .content .section#connaissance .section-content {
+  flex-direction: column;
+}
+body > .content .section#connaissance .section-content .entry {
+  margin-block-start: 0.3em;
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+}
+body > .content .section#connaissance .section-content .entry > *:not(:last-child)::after {
+  content: ":";
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+body > .content .section#connaissance .section-content .entry .info {
+  flex-direction: row;
+  width: 20em;
+}
+body > .content .section#connaissance .section-content .entry ul {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+}
+body > .content .section#connaissance .section-content .entry ul > *:not(:last-child)::after {
+  content: ",";
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+/*# sourceMappingURL=classic.css.map */

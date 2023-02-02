@@ -1,0 +1,51 @@
+:root {
+    --accent-light: #6871B6;
+    --accent-dark: #303765;
+    --accent: #495297;
+    --text-shadow: 0.1em 0.1em 0.19rem #000000;
+    --box-shadow: 0.1em 0.1em #000;
+    --box-blur-top: 0 -2pt 2pt #000;
+    --box-blur-bottom: 0 2pt 2pt #000;
+    --box-blur: 2pt 2pt 2pt #000;
+    --title-invert-color: white;
+    --title-invert-shadow: 0.1em 0.1em 0.19rem #000000;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    margin-block: 0px;
+    /* height: 100vh; */
+    /* aspect-ratio: 8.5/11; */
+    margin-inline: auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+main {
+    flex-grow: 1;
+}
+
+header,
+footer {
+    display: none;
+}
+
+
+/* Base */
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}

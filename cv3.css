@@ -1,0 +1,139 @@
+/* L51 */
+
+body {
+    margin: 0;
+    font-size: 1.25vh;
+    /* font-size: 13px; */
+}
+
+.competence .description,
+.location,
+.connaissance li {
+    font-size: 0.9em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+header .poste {
+    font-size: 2em;
+}
+
+
+/* L99 */
+
+.header .title {
+    margin: 0;
+}
+
+.connaissance h3.title {
+    margin-block: 0;
+}
+
+.title {
+    margin-block-start: var(--standart-margin-size);
+    margin-block-end: 0em;
+}
+
+h2.block {
+    margin-block-end: var(--standart-margin-size);
+    padding: 0.3em;
+}
+
+ul {
+    margin-block-start: 0;
+    margin-block-end: 0em;
+    padding-inline-start: 1.5em;
+}
+
+footer {
+    margin-block-start: 1.25em;
+}
+
+.location,
+.connaissance section,
+.connaissance ul,
+header ul {
+    padding-inline-start: 0em;
+}
+
+
+/* L141 */
+
+.connaissance section>*:not(:last-child)::after,
+.connaissance ul>*:not(:last-child)::after {
+    margin-inline-end: var(--small-margin-size);
+}
+
+.location>*:not(:last-child)::after,
+header ul>*:not(:last-child)::after {
+    margin-inline: var(--small-margin-size);
+}
+
+.entry {
+    grid-template-columns: auto auto;
+}
+
+
+/* L219 */
+
+article>div {
+    /* grid-template-columns: repeat( auto-fit, minmax(23em, 1fr)); */
+    padding-inline: 0.4em;
+}
+
+.connaissance>div {
+    /* grid-template-columns: repeat( auto-fit, minmax(23em, 1fr)); */
+    /* gap: 0.6em 1.2em; */
+}
+
+
+/* L233 */
+
+main {
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-rows: 1.2fr 1.6fr 2.4fr 2.4fr;
+    gap: 0 1.4em;
+    padding-inline: 1.8em;
+    height: 58em;
+}
+
+
+/* L270 */
+
+.page>header {
+    grid-template-columns: 5em 11em 2em 1fr;
+    grid-template-rows: 1em 3.5em 3.5em 2em 2em;
+    margin-block-start: 0;
+}
+
+header .logo {
+    padding: 1em;
+}
+
+
+/* L326 */
+
+footer {
+    /* min-height: 72pt; */
+    grid-template-columns: 1fr;
+    /* grid-template-rows: 2fr 1fr; */
+    gap: 0em 0em;
+    /* background-color: yellow; */
+    height: 8.5em;
+}
+
+footer .logo {
+    padding: 1em;
+    column-gap: 1em;
+    height: fit-content;
+}

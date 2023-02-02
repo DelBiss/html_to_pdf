@@ -1,0 +1,239 @@
+@use "cv";
+$title-font: Arial,
+"Helvetica Neue",
+Helvetica,
+sans-serif;
+$corp-font: "Century Gothic",
+CenturyGothic,
+AppleGothic,
+sans-serif;
+$accent-light: #6871B6;
+$accent-dark: #303765;
+$accent: #495297;
+$box-shadow: 0.1em 0.1em #000;
+$box-blur: 0.2em 0.2em 0.2em #000;
+$box-blur-top: 0 -0.2em 0.2em #000;
+$box-blur-bottom: 0 0.2em 0.2em #000;
+$text-shadow: 0.1em 0.1em 0.23em #000000;
+$standard-margin: 0.6em;
+.dev{
+// @media print {
+    
+    %small-font {
+        font-size: 0.9em;
+        color: #595959;
+    }
+    %inverted-text {
+        color: white;
+        text-shadow: $text-shadow;
+    }
+    %block {
+        @extend %inverted-text;
+        background-color: $accent-light;
+        box-shadow: $box-shadow;
+    }
+    @mixin title($isBlock: false, $isInverted:false) {
+        font-family: $title-font;
+        font-weight: 700;
+        margin-block-start: $standard-margin;
+        @if $isBlock {
+            @extend %inverted-text;
+            background-color: $accent-light;
+            box-shadow: $box-shadow;
+            margin-block-end: $standard-margin;
+        }
+        @else {
+            margin-block-end: 0;
+            @if $isInverted {
+                @extend %inverted-text;
+            }
+            @else {
+                color: $accent-dark;
+            }
+        }
+    }
+    
+    
+    svg {
+        display: unset!important;
+        aspect-ratio: 1;
+        fill: white;
+        filter: drop-shadow( $box-blur);
+        width: 100%;
+    }
+    ul {
+        margin-block-start: 0;
+        margin-block-end: 0em;
+        padding-inline-start: 1.5em;
+    }
+    
+        font-family: $corp-font;
+    >.header {
+        @mixin box($onTop: false) {
+            padding-inline-start: 18em;
+            // margin-block: 1em;
+            @if $onTop {
+                background-color: $accent-dark;
+                box-shadow: $box-blur-top, $box-blur-bottom;
+                z-index: 2;
+            }
+            @else {
+                background-color: $accent;
+                z-index: 1;
+            }
+        }
+        margin-block-end: 2em;
+        display: flex;
+        flex-direction: column;
+        #logo-back {
+            width: 9em;
+            height: 9em;
+            position: absolute;
+            background-color: $accent-light;
+            border-radius: 100%;
+            box-shadow: $box-blur;
+            z-index: 3;
+            margin-block-start: 1em;
+            margin-inline-start: 5em;
+            padding: 1em;
+        }
+        #nom {
+            @include box(true);
+            padding-block-start: 1.3em;
+            padding-block-end: 0.3em;
+            h1 {
+                @include title($isInverted: true);
+                // @extend %inverted-text;
+                font-size: 2.5em;
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+        }
+        #poste {
+            @include box();
+            padding-block-start: 0.6em;
+            padding-block-end: 0.6em;
+            div {
+                @include title($isInverted: true);
+                // @extend %inverted-text;
+                font-size: 2em;
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+        }
+        #contact {
+            @include box(true);
+            padding-block-start: 0.4em;
+            padding-block-end: 0.4em;
+            ul {
+                @include title($isInverted: true);
+                @include cv.separated("—", row, 1em, 1em);
+                // @extend %inverted-text;
+                margin-block-start: 0;
+                margin-block-end: 0;
+            }
+        }
+    }
+    >.footer {
+        height: 8.5em;
+        margin-block-start: 1.25em;
+        background-color: $accent-dark;
+        .logo {
+            // display: none;
+            background: $accent;
+            box-shadow: $box-blur-top, $box-blur-bottom;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1em;
+            column-gap: 1em;
+            height: fit-content;
+        }
+        #contact {
+            display: none;
+        }
+    }
+    >.content {
+        display: grid;
+        grid-template-areas: "Formation Profile" "Formation Compétence" "Expérience Compétence" "Expérience Connaissance";
+        align-content: stretch;
+        grid-template-columns: 1.5fr 2fr;
+        grid-template-rows: 0.5fr 0.6fr 1fr 0.9fr;
+        gap: 0 1.4em;
+        padding-inline: 1.8em;
+        .section {
+            display: flex;
+            flex-direction: column;
+            h2 {
+                @include title($standard-margin);
+                @extend %block;
+                padding: 0.3em;
+                font-size: 1.5em;
+            }
+            .section-content {
+                padding-inline: 0.4em;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                flex-grow: 1;
+                justify-content: space-around;
+                .entry {
+                    margin-block-start: 0.6em;
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        .type {
+                            order: -1;
+                        }
+                        h3 {
+                            @include title();
+                            font-size: 1.2em;
+                            margin-block: 0;
+                        }
+                        .instance {
+                            @include cv.as-list();
+                            .location {
+                                @extend %small-font;
+                                @include cv.separated("|");
+                            }
+                            time {
+                                flex-grow: 1;
+                                text-align: right;
+                            }
+                        }
+                    }
+                    .description {
+                        @extend %small-font;
+                        display: none;
+                    }
+                }
+            }
+            &#formation {
+                grid-area: Formation;
+            }
+            &#profil {
+                grid-area: Profile;
+            }
+            &#competence {
+                grid-area: Compétence;
+            }
+            &#experience {
+                grid-area: Expérience;
+            }
+            &#connaissance {
+                grid-area: Connaissance;
+                .entry {
+                    margin-block-start: 0.3em;
+                    @include cv.separated(":", column);
+                    .info {
+                        flex-direction: row
+                    }
+                    ul {
+                        @extend %small-font;
+                        @include cv.separated(",");
+                    }
+                }
+            }
+        }
+    }
+}
+// }

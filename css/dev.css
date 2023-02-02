@@ -1,0 +1,291 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  background-color: black;
+}
+
+@media print {
+  body {
+    background-color: white;
+  }
+}
+@page {
+  size: 8.5in 11in;
+  margin: 0.2in;
+}
+.cv {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  margin-block: 0px;
+  margin-inline: auto;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+@media print {
+  .cv {
+    font-size: 1.25vh !important;
+    height: 100vh !important;
+    width: 77.2727vh !important;
+  }
+}
+.cv a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.cv .content {
+  flex-grow: 1;
+}
+
+.dev {
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+.dev > .content .section#connaissance .entry ul, .dev > .content .section .section-content .entry .description, .dev > .content .section .section-content .entry .info .instance .location {
+  font-size: 0.9em;
+  color: #595959;
+}
+.dev > .content .section h2, .dev > .header #contact ul, .dev > .header #poste div, .dev > .header #nom h1 {
+  color: white;
+  text-shadow: 0.1em 0.1em 0.23em #000000;
+}
+.dev > .content .section h2 {
+  background-color: #6871B6;
+  box-shadow: 0.1em 0.1em #000;
+}
+.dev svg {
+  display: unset !important;
+  aspect-ratio: 1;
+  fill: white;
+  filter: drop-shadow(0.2em 0.2em 0.2em #000);
+  width: 100%;
+}
+.dev ul {
+  margin-block-start: 0;
+  margin-block-end: 0em;
+  padding-inline-start: 1.5em;
+}
+.dev > .header {
+  margin-block-end: 2em;
+  display: flex;
+  flex-direction: column;
+}
+.dev > .header #logo-back {
+  width: 9em;
+  height: 9em;
+  position: absolute;
+  background-color: #6871B6;
+  border-radius: 100%;
+  box-shadow: 0.2em 0.2em 0.2em #000;
+  z-index: 3;
+  margin-block-start: 1em;
+  margin-inline-start: 5em;
+  padding: 1em;
+}
+.dev > .header #nom {
+  padding-inline-start: 18em;
+  background-color: #303765;
+  box-shadow: 0 -0.2em 0.2em #000, 0 0.2em 0.2em #000;
+  z-index: 2;
+  padding-block-start: 1.3em;
+  padding-block-end: 0.3em;
+}
+.dev > .header #nom h1 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  margin-block-start: 0.6em;
+  margin-block-end: 0;
+  font-size: 2.5em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.dev > .header #poste {
+  padding-inline-start: 18em;
+  background-color: #495297;
+  z-index: 1;
+  padding-block-start: 0.6em;
+  padding-block-end: 0.6em;
+}
+.dev > .header #poste div {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  margin-block-start: 0.6em;
+  margin-block-end: 0;
+  font-size: 2em;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.dev > .header #contact {
+  padding-inline-start: 18em;
+  background-color: #303765;
+  box-shadow: 0 -0.2em 0.2em #000, 0 0.2em 0.2em #000;
+  z-index: 2;
+  padding-block-start: 0.4em;
+  padding-block-end: 0.4em;
+}
+.dev > .header #contact ul {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  margin-block-start: 0.6em;
+  margin-block-end: 0;
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.dev > .header #contact ul > *:not(:last-child)::after {
+  content: "—";
+  padding-inline-start: 1em;
+  padding-inline-end: 1em;
+}
+.dev > .footer {
+  height: 8.5em;
+  margin-block-start: 1.25em;
+  background-color: #303765;
+}
+.dev > .footer .logo {
+  background: #495297;
+  box-shadow: 0 -0.2em 0.2em #000, 0 0.2em 0.2em #000;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1em;
+  column-gap: 1em;
+  height: fit-content;
+}
+.dev > .footer #contact {
+  display: none;
+}
+.dev > .content {
+  display: grid;
+  grid-template-areas: "Formation Profile" "Formation Compétence" "Expérience Compétence" "Expérience Connaissance";
+  align-content: stretch;
+  grid-template-columns: 1.5fr 2fr;
+  grid-template-rows: 0.5fr 0.6fr 1fr 0.9fr;
+  gap: 0 1.4em;
+  padding-inline: 1.8em;
+}
+.dev > .content .section {
+  display: flex;
+  flex-direction: column;
+}
+.dev > .content .section h2 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  margin-block-start: 0.6em;
+  background-color: #6871B6;
+  box-shadow: 0.1em 0.1em #000;
+  margin-block-end: 0.6em;
+  padding: 0.3em;
+  font-size: 1.5em;
+}
+.dev > .content .section .section-content {
+  padding-inline: 0.4em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+.dev > .content .section .section-content .entry {
+  margin-block-start: 0.6em;
+}
+.dev > .content .section .section-content .entry .info {
+  display: flex;
+  flex-direction: column;
+}
+.dev > .content .section .section-content .entry .info .type {
+  order: -1;
+}
+.dev > .content .section .section-content .entry .info h3 {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  margin-block-start: 0.6em;
+  margin-block-end: 0;
+  color: #303765;
+  font-size: 1.2em;
+  margin-block: 0;
+}
+.dev > .content .section .section-content .entry .info .instance {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+}
+.dev > .content .section .section-content .entry .info .instance .location {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+}
+.dev > .content .section .section-content .entry .info .instance .location > *:not(:last-child)::after {
+  content: "|";
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+.dev > .content .section .section-content .entry .info .instance time {
+  flex-grow: 1;
+  text-align: right;
+}
+.dev > .content .section .section-content .entry .description {
+  display: none;
+}
+.dev > .content .section#formation {
+  grid-area: Formation;
+}
+.dev > .content .section#profil {
+  grid-area: Profile;
+}
+.dev > .content .section#competence {
+  grid-area: Compétence;
+}
+.dev > .content .section#experience {
+  grid-area: Expérience;
+}
+.dev > .content .section#connaissance {
+  grid-area: Connaissance;
+}
+.dev > .content .section#connaissance .entry {
+  margin-block-start: 0.3em;
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: column;
+  padding-inline-start: 0;
+}
+.dev > .content .section#connaissance .entry > *:not(:last-child)::after {
+  content: ":";
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+.dev > .content .section#connaissance .entry .info {
+  flex-direction: row;
+}
+.dev > .content .section#connaissance .entry ul {
+  display: flex;
+  list-style: none;
+  align-items: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
+  flex-direction: row;
+  padding-inline-start: 0;
+}
+.dev > .content .section#connaissance .entry ul > *:not(:last-child)::after {
+  content: ",";
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+/*# sourceMappingURL=dev.css.map */

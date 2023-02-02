@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+@media print {
+    body {
+        background-color: white;
+    }
+}
+
+@page {
+    size: 8.5in 11in;
+    margin: 0.2in;
+}
+
+.cv {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    margin-block: 0px;
+    margin-inline: auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    @media print {
+        font-size: 1.25vh!important;
+        height: 100vh!important;
+        width: 77.2727vh!important;
+    }
+    a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    .content {
+        flex-grow: 1;
+    }
+}
+
+@mixin as-list($direction: row) {
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: baseline;
+    flex-direction: $direction;
+    padding-inline-start: 0;
+}
+
+@mixin separated($char: "|", $direction: row, $space-before:0, $space-after:0) {
+    @include as-list($direction);
+    >*:not(:last-child)::after {
+        content: $char;
+        padding-inline-start: $space-before;
+        padding-inline-end: $space-after;
+    }
+}

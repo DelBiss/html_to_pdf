@@ -1,0 +1,73 @@
+/* Main */
+
+main {
+    display: grid;
+    grid-template-areas: "Formation Profile" "Formation Compétence" "Expérience Compétence" "Expérience Connaissance";
+    align-content: stretch;
+}
+
+.formation {
+    grid-area: Formation;
+}
+
+.profil {
+    grid-area: Profile;
+}
+
+.competence {
+    grid-area: Compétence;
+}
+
+.experience {
+    grid-area: Expérience;
+}
+
+.connaissance {
+    grid-area: Connaissance;
+}
+
+
+/* Entry */
+
+.entry,
+.location {
+    display: flex;
+}
+
+time {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.location>*:not(:last-child)::after {
+    content: "|";
+}
+
+
+/* .connaissance */
+
+.connaissance section {
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: baseline;
+    flex-direction: column;
+}
+
+.connaissance ul {
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: baseline;
+    padding: 0;
+}
+
+.connaissance section>*:not(:last-child)::after {
+    content: ":";
+}
+
+.connaissance ul>*:not(:last-child)::after {
+    content: ",";
+}

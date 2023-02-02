@@ -1,0 +1,16 @@
+:root {
+    --accent-light: #6871B6;
+    --accent-dark: #303765;
+    --accent: #495297;
+    --small-font-color: #595959;
+}
+
+.title {
+    color: var(--accent-dark);
+}
+
+.competence .description,
+.location,
+.connaissance li {
+    color: var(--small-font-color);
+}

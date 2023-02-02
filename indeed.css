@@ -1,0 +1,37 @@
+.jobsearch-JobInfoHeader-subtitle{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1em;
+    margin-top: 0!important;
+}
+.jobsearch-CompanyReview,
+#jobDescriptionTitle,
+.jobsearch-JobDescriptionSection,
+#benefits, 
+#jobsearch-ViewJobButtons-container, 
+.jobsearch-JobTab-content, 
+#relatedLinks,
+#m-gnav-footer,
+nav 
+{
+    display: none;
+}
+
+.jobsearch-JobInfoHeader-title, p {
+    margin: 0!important;
+    line-height: 0.5!important;
+}
+
+ul{
+   margin-block:5px; 
+}
+li{
+    line-height:1.1;
+    margin-bottom:5px;
+}
+
+.jobsearch-ViewJobLayout-fluidContainer,.jobsearch-JobComponent,body {
+   padding: 0!important;
+   margin: 0!important;
+}

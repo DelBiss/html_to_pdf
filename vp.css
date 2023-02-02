@@ -1,0 +1,62 @@
+html {
+    width: 100%;
+    height: 100%;
+    outline: 5px red;
+    outline-offset: -5px;
+    background: chartreuse;
+}
+
+body {
+    /* width: 100%; */
+    height: 100%;
+    outline: 5px rgb(255 0 73);
+    outline-offset: -5px;
+    background: rgb(255 106 0);
+    margin: 0;
+}
+
+#the-viewport {
+    position: fixed;
+    inset: 0;
+    outline-offset: -5px;
+    outline-style: dashed;
+    outline-width: 5px;
+    outline-color: blue;
+}
+
+#vs {
+    position: absolute;
+    top: 0;
+    /* outline-offset: -5px; */
+    /* outline-style: dotted; */
+    /* outline-width: 5px; */
+    background: #add8e6b3;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+}
+
+#va {
+    /* position: fixed; */
+    inset: 0;
+    outline-offset: -5px;
+    outline-style: double;
+    outline-width: 5px;
+    outline-color: #f400ff;
+    width: 100vi;
+    height: 100vh;
+}
+
+.lorem {}
+
+.parent {
+    width: 10em;
+    height: 10em;
+    display: none;
+}
+
+.parent>.child {
+    width: 100%;
+    height: 100%;
+    background: red;
+}
